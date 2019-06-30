@@ -1,0 +1,16 @@
+---
+- hosts: app
+  remote_user: ansible
+  become: true
+
+  tasks:
+  - name: Dowload rpm package for Java JDK
+    get_url:
+      url: http://download.oracle.com/otn-pub/java/jdk/8u131-b11/d54c1d3a095b4ff2b6607d096fa80163/jdk-8u131-linux-x64.rpm
+      dest: /opt/jdk-8u131-linux-x64.rpm
+      headers: 'Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie'
+
+  - name: Install Java JDK
+    yum:
+      name: /opt/jdk-8u131-linux-x64.rpm
+      state: present
