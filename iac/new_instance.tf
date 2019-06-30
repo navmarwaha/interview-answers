@@ -36,7 +36,7 @@ resource "aws_security_group" "only_ssh" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags {
+  tags = {
     Name = "Allow SSH from All"
   }
 }
@@ -51,16 +51,14 @@ resource "aws_ebs_volume" "calc_vol" {
   availability_zone = "ap-south-1a"
   type = "gp2"
   size = 100
-  tags {
+  tags = {
     Name = "For Complex Calculator"
-    "Business Unit" = "Tech"
-    Env = "Prod"
   }
 }
 
 resource "null_resource" "calculator_node" {
 
-  triggers {
+  triggers = {
     volume_attachment = "${aws_volume_attachment.vol_att1.id}"
   }
 
@@ -92,9 +90,8 @@ resource "aws_instance" "complex_calculator" {
     volume_size = 20
   }
 
-  tags {
+  tags = {
     Name = "Equation-Calculator"
-    "Business Unit" = "Tech"
     Env = "Prod"
   }
 }
