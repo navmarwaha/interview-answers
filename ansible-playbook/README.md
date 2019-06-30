@@ -1,6 +1,6 @@
 # Ansible Playbook to Install Oracle JDK
 
-This Ansible playbook downloads & installs Oracle JDK 1.8.131 
+This Ansible playbook downloads & installs Oracle JDK 1.8.0_131
 
 ## Note
 
