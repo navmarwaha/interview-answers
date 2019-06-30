@@ -5,5 +5,5 @@ It also maintains the state of this setup the S3 bucket & creates a lock in the 
 
 ## Requirements
 
- - You need to install [Terraform](https://learn.hashicorp.com/terraform/getting-started/install.html#installing-terraform) on the machine where you want to test this.
+ - You need to install [Terraform](https://learn.hashicorp.com/terraform/getting-started/install.html#installing-terraform) v0.12.3 on the machine where you want to test this.
  - You also need to add [environment variables](https://www.terraform.io/docs/providers/aws/index.html#environment-variables) for AWS credentials on the machine from where you will execute this.
