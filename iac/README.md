@@ -1,7 +1,7 @@
 # Launch Instance
 
 This terraform configuration launches an AWS instance in region ap-south-1 & availability zone 1a, with 20 GB OS volume & 100 GB local data volume.
-It also maintains the state of this setup the S3 bucket & creates a lock in the DynamoDB if an operation/change is in progress on this setup.
+It also maintains the state of this setup in the S3 bucket & creates a lock in the DynamoDB if an operation/change is in progress on this setup.
 
 ## Requirements
 
